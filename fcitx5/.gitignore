@@ -1,7 +1,0 @@
-__pycache__/
-*.py[cod]
-*$py.class
-.local/
-templates/panel.svg
-templates/highlight.svg
-templates/theme.conf

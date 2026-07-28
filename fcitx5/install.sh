@@ -9,5 +9,5 @@ if ! command -v python3 &> /dev/null; then
     exit 1
 fi
 
-# Run the generator
-python3 "$(dirname "$0")/generate.py"
+# Run the generator from repo root
+python3 "$(dirname "$0")/../generate_fcitx5_theme.py"

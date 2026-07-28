@@ -4,22 +4,19 @@ DankMaterialShell utility scripts.
 
 ## extract_dms_theme.py
 
-Extract the current auto-generated DMS theme (`dms-colors.json`) into a custom theme JSON file.
+Extract current auto-generated DMS theme into a custom theme JSON file.
 
 ```bash
 python3 extract_dms_theme.py
-python3 extract_dms_theme.py -o ~/my-theme.json
-python3 extract_dms_theme.py -n "Jade Theme"
+python3 extract_dms_theme.py -o ~/my-theme.json -n "Jade Theme"
 ```
 
-Edit the output file, then load in DMS: Settings → Theme Color → Custom.
+Edit output, then load in DMS: Settings → Theme Color → Custom.
 
-## fcitx5/ — Fcitx5 DMS Theme
+## generate_fcitx5_theme.py
 
-Dynamic Fcitx5 theme that syncs with DMS/Matugen colors and layout.
+Generate a Fcitx5 theme that syncs with DMS/Matugen colors and layout.
 
 ```bash
-cd fcitx5 && ./install.sh
+python3 generate_fcitx5_theme.py
 ```
-
-See `fcitx5/README.md` for details.
