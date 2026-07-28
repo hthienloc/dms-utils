@@ -30,3 +30,14 @@ python3 generate_vesktop_theme.py                          # dark mode → flatp
 python3 generate_vesktop_theme.py --mode light              # light mode
 python3 generate_vesktop_theme.py --stdout                  # print to stdout
 ```
+
+## generate_spicetify_theme.py
+
+Generate a Spicetify theme (color.ini) from DMS auto-generated colors.
+
+```bash
+python3 generate_spicetify_theme.py                        # install + prompt to apply
+python3 generate_spicetify_theme.py --name "dms-jade"      # custom theme name
+python3 generate_spicetify_theme.py --skip-apply           # install only
+python3 generate_spicetify_theme.py --stdout               # print to stdout
+```
