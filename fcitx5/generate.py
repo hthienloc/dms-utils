@@ -7,11 +7,11 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DMS_COLORS_PATH = os.path.expanduser("~/.config/qt6ct/colors/matugen.conf")
 DMS_LAYOUT_PATH = os.path.expanduser("~/.config/niri/dms/layout.kdl")
 
-THEME_DIR = os.path.join(SCRIPT_DIR, "niri")
+THEME_DIR = os.path.join(SCRIPT_DIR, "templates")
 THEME_CONF_PATH = os.path.join(THEME_DIR, "theme.conf")
 PANEL_SVG_PATH = os.path.join(THEME_DIR, "panel.svg")
 HIGHLIGHT_SVG_PATH = os.path.join(THEME_DIR, "highlight.svg")
-INSTALL_PATH = os.path.expanduser("~/.local/share/fcitx5/themes/niri-dms")
+INSTALL_PATH = os.path.expanduser("~/.local/share/fcitx5/themes/dms")
 
 # Tune highlight size (px)
 HIGHLIGHT_V_PADDING = 2
@@ -123,7 +123,7 @@ def update_theme_conf(primary_color, fg_color, on_primary_color):
     content = re.sub(r"HighlightCandidateColor=#?[a-fA-F0-9]+", f"HighlightCandidateColor={on_primary_color}", content)
     content = re.sub(r"HighlightColor=#?[a-fA-F0-9]+", f"HighlightColor={primary_color}", content)
     content = re.sub(r"NormalColor=#?[a-fA-F0-9]+", f"NormalColor={fg_color}", content)
-    content = re.sub(r"Name=.*", "Name=DMS Niri", content)
+    content = re.sub(r"Name=.*", "Name=DMS", content)
     content = re.sub(r"ScaleWithDPI=.*", "ScaleWithDPI=True", content)
 
     with open(THEME_CONF_PATH, "w") as f:
@@ -178,7 +178,7 @@ def main():
 
     print("Theme files updated.")
 
-    if input("\nInstall to ~/.local/share/fcitx5/themes/niri-dms? (y/N): ").lower() == "y":
+    if input(f"\nInstall to {INSTALL_PATH}? (y/N): ").lower() == "y":
         if install_theme():
             if input("Restart fcitx5 now? (y/N): ").lower() == "y":
                 restart_fcitx5()

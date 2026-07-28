@@ -2,6 +2,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 .local/
-fcitx5/niri/panel.svg
-fcitx5/niri/highlight.svg
-fcitx5/niri/theme.conf
+fcitx5/templates/panel.svg
+fcitx5/templates/highlight.svg
+fcitx5/templates/theme.conf

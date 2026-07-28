@@ -1,4 +1,4 @@
-# Fcitx5 Niri DMS Theme
+# Fcitx5 DMS Theme
 
 A dynamic Fcitx5 theme that automatically synchronizes with **Dank Material Shell (DMS)** and **Matugen** colors/layout.
 Inherits the sleek border style from [Ori-fcitx5](https://github.com/Reverier-Xu/Ori-fcitx5) but adds dynamic capabilities.
@@ -36,10 +36,10 @@ cd dms-utils/fcitx5 && ./install.sh
    cd dms-utils/fcitx5 && python3 generate.py
    ```
 
-2. Follow the prompts to install the theme to `~/.local/share/fcitx5/themes/niri-dms` and optionally restart Fcitx5.
+2. Follow the prompts to install the theme to `~/.local/share/fcitx5/themes/dms` and optionally restart Fcitx5.
 
 3. Open **Fcitx5 Configuration** and navigate to:
-   `Addons` → `Classic User Interface` (click Configure) → `Theme` (or `Dark Theme`) → select **DMS Niri**.
+   `Addons` → `Classic User Interface` (click Configure) → `Theme` (or `Dark Theme`) → select **DMS**.
 
 ## Customization
 

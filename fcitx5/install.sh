@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Fcitx5 Niri DMS - Easy Installer
-echo "--- Fcitx5 Niri DMS Installer ---"
+# Fcitx5 DMS - Easy Installer
+echo "--- Fcitx5 DMS Installer ---"
 
 # Check for python3
 if ! command -v python3 &> /dev/null; then
