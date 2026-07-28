@@ -39,6 +39,7 @@ shadow             = {shadow}
 selected-row       = {selected_row}
 button             = {button}
 button-active      = {button_active}
+button-secondary   = {button_secondary}
 button-disabled    = {button_disabled}
 tab-active         = {tab_active}
 notification       = {notification}
@@ -80,9 +81,10 @@ def extract_colors(dms_data, mode="dark"):
         "player": strip_hash(surface_container),
         "card": strip_hash(surface_container_high),
         "shadow": strip_hash(c.get("shadow", "#000000")),
-        "selected_row": strip_hash(on_surface_variant),
+        "selected_row": strip_hash(primary),
         "button": strip_hash(primary),
         "button_active": strip_hash(primary),
+        "button_secondary": strip_hash(on_surface_variant),
         "button_disabled": strip_hash(outline_variant),
         "tab_active": strip_hash(primary),
         "notification": strip_hash(surface_container_highest),
