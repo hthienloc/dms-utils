@@ -82,7 +82,7 @@ def extract_colors(dms_data, mode="dark"):
         "shadow": strip_hash(c.get("shadow", "#000000")),
         "selected_row": strip_hash(on_surface_variant),
         "button": strip_hash(primary),
-        "button_active": strip_hash(on_primary),
+        "button_active": strip_hash(primary),
         "button_disabled": strip_hash(outline_variant),
         "tab_active": strip_hash(primary),
         "notification": strip_hash(surface_container_highest),
