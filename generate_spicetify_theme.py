@@ -143,12 +143,23 @@ def main():
     theme_dir = os.path.join(SPICETIFY_THEMES_DIR, args.name)
     install_theme(theme_dir, ini)
 
-    print(f"\nActivate:\n  spicetify config current_theme {args.name}\n  spicetify apply")
+    theme_name = args.name
+
+    def set_and_apply():
+        try:
+            subprocess.run(["spicetify", "config", "current_theme", theme_name], check=True)
+            print(f"spicetify config current_theme {theme_name}: OK")
+        except subprocess.CalledProcessError as e:
+            print(f"spicetify config failed: {e}", file=sys.stderr)
+            return
+        spicetify_apply()
+
+    print(f"\nActivate:\n  spicetify config current_theme {theme_name}\n  spicetify apply")
 
     if not args.skip_apply:
-        resp = input("\nRun spicetify apply now? (y/N): ").lower()
+        resp = input("\nRun spicetify config + apply now? (y/N): ").lower()
         if resp == "y":
-            spicetify_apply()
+            set_and_apply()
 
 
 if __name__ == "__main__":
