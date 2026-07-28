@@ -20,3 +20,13 @@ Generate a Fcitx5 theme that syncs with DMS/Matugen colors and layout.
 ```bash
 python3 generate_fcitx5_theme.py
 ```
+
+## generate_vesktop_theme.py
+
+Generate a Vesktop/Vencord theme (CSS) from DMS auto-generated colors.
+
+```bash
+python3 generate_vesktop_theme.py                          # dark mode → flatpak path
+python3 generate_vesktop_theme.py --mode light              # light mode
+python3 generate_vesktop_theme.py --stdout                  # print to stdout
+```
